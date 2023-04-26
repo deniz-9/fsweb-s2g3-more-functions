@@ -16,9 +16,17 @@
   örnek output: ""
 */
 
-function dosyaAdiniBul(/* kodlar buraya */) {
+function dosyaAdiniBul(input) {
   // kodlar buraya
+  if (!input) {
+		return "";
+	}
+  const outputPath = input === "" ? " " : input.split("/");
+  const fileName = outputPath.pop();
+  return fileName;
+
 }
+console.log("Görev-1__", dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"))
 
 /*
   GÖREV 2
@@ -38,9 +46,16 @@ function dosyaAdiniBul(/* kodlar buraya */) {
   örnek output: 104
 */
 
-function ortalamaBul(/* kodlar buraya */) {
+function ortalamaBul(input) {
   // kodlar buraya
+  const outputPath = input.length === 0 ? null : Math.round(input.reduce((x, y) => {return x + y}, 0) / input.length);
+  return outputPath;
+
 }
+console.log(ortalamaBul([]));
+console.log(ortalamaBul([6]));
+console.log(ortalamaBul([20, 100, 45, 8]));
+console.log(" Görev 2 :" + ortalamaBul([12,60,78,25,56,10]));
 
 /*
   GÖREV 3
@@ -62,9 +77,14 @@ function ortalamaBul(/* kodlar buraya */) {
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(/* kodlar buraya */) {
+function ortalamadanBuyukleriBul(arr, ortalamaBul) {
   // kodlar buraya
+  const ortalamabul = arr.length === 0 ? null : arr.filter(y => y >= ortalamaBul(arr));
+  return ortalamabul;
+
 }
+
+  console.log("Görev 3 : " + ortalamadanBuyukleriBul([109, 216, 288, 143, 71, 185, -278, 194, 5], ortalamaBul));
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
