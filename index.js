@@ -77,9 +77,10 @@ console.log(" Görev 2 :" + ortalamaBul([12, 60, 78, 25, 56, 10]));
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(arr, ortalamaBul) {
+function ortalamadanBuyukleriBul(arr, ortalamaBulCallBack) {
   // kodlar buraya
-  const ortalamabul = arr.length === 0 ? null : arr.filter(y => y >= ortalamaBul(arr));
+  const ortalama = ortalamaBulCallBack(arr);
+  const ortalamabul = arr.length === 0 ? null : arr.filter(y => y >= ortalama);
   return ortalamabul;
 
 }
