@@ -19,9 +19,9 @@
 function dosyaAdiniBul(input) {
   // kodlar buraya
   if (!input) {
-		return "";
-	}
-  const outputPath = input === "" ? " " : input.split("/");
+    return "";
+  }
+  const outputPath = input.split("/");
   const fileName = outputPath.pop();
   return fileName;
 
@@ -48,14 +48,14 @@ console.log("Görev-1__", dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp
 
 function ortalamaBul(input) {
   // kodlar buraya
-  const outputPath = input.length === 0 ? null : Math.round(input.reduce((x, y) => {return x + y}, 0) / input.length);
+  const outputPath = input.length === 0 ? null : Math.round(input.reduce((x, y) => { return x + y }, 0) / input.length);
   return outputPath;
 
 }
 console.log(ortalamaBul([]));
 console.log(ortalamaBul([6]));
 console.log(ortalamaBul([20, 100, 45, 8]));
-console.log(" Görev 2 :" + ortalamaBul([12,60,78,25,56,10]));
+console.log(" Görev 2 :" + ortalamaBul([12, 60, 78, 25, 56, 10]));
 
 /*
   GÖREV 3
@@ -84,7 +84,7 @@ function ortalamadanBuyukleriBul(arr, ortalamaBul) {
 
 }
 
-  console.log("Görev 3 : " + ortalamadanBuyukleriBul([109, 216, 288, 143, 71, 185, -278, 194, 5], ortalamaBul));
+console.log("Görev 3 : " + ortalamadanBuyukleriBul([109, 216, 288, 143, 71, 185, -278, 194, 5], ortalamaBul));
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
